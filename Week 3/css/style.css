@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100vh;
+    width:100vw;
+	margin: -25px auto;
+	display: flex;
+	align-items: center;
+}
+.overlay{
+    width:100vw;
+    height:100vh;
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    z-index:3;
+    position:absolute;
+}
+.wereldbol{
+    background-image:url(../img/wereldbol.jpg);
+    width:100vw;
+    height:100vh;
+    z-index:1;
+    position:absolute;
+}
+
+.loading {
+	border: 6px solid darkblue;
+	border-top-color: beige;
+    border-radius: 100%;
+	height: 200px;
+	width: 200px;
+    animation: rotate .8s infinite linear;
+    z-index:4;
+    top:45%;
+    left:45%;
+    position:absolute;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+/* @keyframes vallende-ballen {
+    0% {top: -10vh; filter: blur(5px)}
+    10% {top: 70vh;}
+    25% {top: 45vh}
+    45% {top: 52vh}
+    55% {top: 49vh}
+    75% {top: 50vh; filter: blur(0px)}
+    90% {top: 50vh}
+    100% {top: 110vh; filter: blur(5px)}
+} */
+
